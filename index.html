@@ -1,22 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>LLM-Handover: Task-oriented Robot-Human Handovers on Legged Manipulators</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AFT‑Handover: Task‑oriented Robot–Human Handovers on Legged Manipulators</title>
+  <meta name="description" content="Project page for AFT‑Handover: Task‑oriented Robot–Human Handovers on Legged Manipulators" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#080a0f;--panel:#0e121a;--ink:#e8edf6;--muted:#a7b0c0;--line:#1a2230;--brand:#6aa8ff;--brand-2:#67e8f9;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin:0 auto;padding:32px 20px}
+    header{display:grid;gap:18px;justify-items:center;text-align:center;padding-top:10px}
+    .title{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:.2px}
+    .subtitle{font-size:clamp(16px,2.4vw,22px);color:var(--muted)}
+    .authors{display:flex;flex-wrap:wrap;gap:10px 16px;justify-content:center;color:#cfd7e6}
+    .affils{color:var(--muted);font-size:14px;margin-top:-6px}
+    .badgebar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:14px 0 6px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:linear-gradient(180deg,#0f1420,#0a0e16);color:var(--ink);font-weight:600}
+    .btn:hover{border-color:#2a3547}
+    .teaser{margin:22px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 6px 30px rgba(0,0,0,.35)}
+    .teaser img, .teaser video{width:100%;display:block}
+    section{padding:14px 0 8px;margin:8px 0;border-top:1px solid var(--line)}
+    h2{font-size:24px;margin:8px 0 4px}
+    p{margin:8px 0;color:#d9e1ee}
+    .cols{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:900px){.cols{grid-template-columns:1.3fr .7fr}}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+    .thumbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .thumb{border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .code{background:#0b0f17;border:1px solid var(--line);border-radius:10px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;white-space:pre-wrap}
+    footer{margin:28px 0 18px;color:var(--muted);font-size:13px}
+    .grad{background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .chip{display:inline-flex;align-items:center;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:#bfc8d9}
+  </style>
 </head>
 <body>
-  <h1>LLM-Handover</h1>
-  <p><b>Paper:</b> Task-oriented Robot-Human Handovers on Legged Manipulators</p>
-  
-  <h2>Abstract</h2>
-  <p>Task-oriented handovers (TOH) are fundamental to effective human–robot collaboration...</p>
-  
-  <h2>Resources</h2>
-  <ul>
-    <li><a href="paper.pdf">📄 Paper (PDF)</a></li>
-    <li><a href="https://arxiv.org/abs/...">📑 arXiv Preprint</a></li>
-    <li><a href="https://github.com/yourusername/llm-handover">💻 Code</a></li>
-    <li><a href="https://youtu.be/...">🎥 Video</a></li>
-  </ul>
+  <div class="wrap">
+    <header>
+      <div class="chip">Project Page</div>
+      <div class="title"><span class="grad">AFT‑Handover</span>: Task‑oriented Robot–Human Handovers on Legged Manipulators</div>
+      <div class="authors">
+        <span>Anonymous Authors</span>
+        <!-- Replace with real author list for camera‑ready; keep anonymous for review. -->
+      </div>
+      <div class="affils">Affiliations withheld for double‑blind review</div>
+      <div class="badgebar">
+        <a class="btn" href="paper.pdf">📄 Paper (PDF)</a>
+        <a class="btn" href="#">📑 arXiv</a>
+        <a class="btn" href="#">💻 Code</a>
+        <a class="btn" href="#video">🎥 Video</a>
+        <a class="btn" href="#bibtex">📚 BibTeX</a>
+      </div>
+      <div class="teaser">
+        <!-- Replace src with your teaser image or video poster -->
+        <img src="static/teaser.jpg" alt="AFT‑Handover teaser showing task‑oriented robot–human handovers with diverse tools" />
+      </div>
+    </header>
+
+    <section id="abstract" class="cols">
+      <div class="panel">
+        <h2>Abstract</h2>
+        <p>Task‑oriented handovers (TOH) are fundamental to effective human–robot collaboration, requiring robots to present objects in ways that support the human’s intended post‑handover use. Many existing approaches model affordances in an object‑ or task‑specific manner, limiting their ability to generalize to novel scenarios. To address this challenge, we introduce <b>AFT‑Handover</b>, a framework that combines large language model (LLM)‑driven affordance reasoning with texture‑based transfer to enable zero‑shot, task‑aware handovers. For a novel object–task pair, the framework retrieves a proxy exemplar from a compact database, establishes part‑level correspondences via LLM reasoning, and transfers annotated affordances using feature‑based texture mapping. We evaluate AFT‑Handover across diverse object–task pairs, showing improved grasp success rates and stronger generalization compared to state‑of‑the‑art baselines. In a user study with 14 participants, our method was preferred in <b>71.4%</b> of trials, reducing regrasping effort and enhancing perceived task understanding. Finally, we demonstrate the first real‑world task‑oriented handovers on legged manipulators, highlighting the potential of integrating semantic reasoning with affordance transfer for robust, mobile robot–human interaction.</p>
+      </div>
+      <div class="panel">
+        <h2>At a Glance</h2>
+        <ul>
+          <li>LLM‑guided functional <em>part</em> reasoning + texture‑based affordance transfer</li>
+          <li>Zero‑shot generalization across conventional & unconventional tool–task pairs</li>
+          <li>Improved grasp success vs. SOTA; fewer regrasps in user study</li>
+          <li>First TOH on legged manipulators</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="video" class="panel">
+      <h2>Video</h2>
+      <!-- Replace the src with your YouTube embed link -->
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;border:1px solid var(--line)">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="AFT‑Handover video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
+      </div>
+    </section>
+
+    <section id="results" class="panel">
+      <h2>Qualitative Results</h2>
+      <div class="thumbgrid">
+        <div class="thumb"><img src="static/result_1.jpg" alt="Example 1"/></div>
+        <div class="thumb"><img src="static/result_2.jpg" alt="Example 2"/></div>
+        <div class="thumb"><img src="static/result_3.jpg" alt="Example 3"/></div>
+        <div class="thumb"><img src="static/result_4.jpg" alt="Example 4"/></div>
+      </div>
+    </section>
+
+    <section id="paper" class="cols">
+      <div class="panel">
+        <h2>Method Overview</h2>
+        <p>AFT‑Handover integrates perception, LLM‑based reasoning, and feature‑space texture transfer to produce task‑aware grasp proposals. Given an RGB‑D observation and a natural‑language task description, the system segments the target object, retrieves a semantically similar proxy exemplar, aligns functional parts via LLM cues, transfers dense affordance maps to the query shape, and selects a grasp that both avoids human‑contact regions and supports the intended post‑handover use.</p>
+      </div>
+      <div class="panel">
+        <h2>Resources</h2>
+        <ul>
+          <li>📄 <a href="paper.pdf">Paper (PDF)</a></li>
+          <li>📑 <a href="#">arXiv</a></li>
+          <li>💻 <a href="#">Code</a></li>
+          <li>🎥 <a href="#video">Video</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="bibtex" class="panel">
+      <h2>Citation</h2>
+      <pre class="code">@inproceedings{aft-handover,
+  title     = {AFT-Handover: Task-oriented Robot--Human Handovers on Legged Manipulators},
+  author    = {Anonymous},
+  booktitle = {Proceedings of the IEEE Conference},
+  year      = {2025}
+}</pre>
+    </section>
+
+    <section id="ack" class="panel">
+      <h2>Acknowledgments</h2>
+      <p>Website style inspired by popular paper pages (e.g., NeRFies/PerAct/VoxPoser/NARRATE). Please retain attribution if you reuse this template.</p>
+    </section>
+
+    <footer>
+      <div>AFT‑Handover • Project page for research preview • Last updated: <span id="upd"></span></div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('upd').textContent = new Date().toISOString().slice(0,10);
+  </script>
 </body>
 </html>
