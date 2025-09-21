@@ -45,12 +45,12 @@
   <div class="wrap">
     <header>
       <div class="chip">Project Page</div>
-      <div class="title"><span class="grad">AFT‑Handover</span>: Task‑oriented Robot–Human Handovers on Legged Manipulators</div>
+      <div class="title"><span class="grad">LLM‑Handover</span>: Exploiting LLMs for Task‑oriented Robot–Human Handovers</div>
       <div class="authors">
         <span>Anonymous Authors</span>
         <!-- Replace with real author list for camera‑ready; keep anonymous for review. -->
       </div>
-      <div class="affils">Affiliations withheld for double‑blind review</div>
+      <div class="affils">Affiliations withheld for double‑blind review. Updates following soon!</div>
       <div class="badgebar">
         <a class="btn" href="paper.pdf">📄 Paper (PDF)</a>
         <a class="btn" href="#">💻 Code (soon..)</a>
@@ -59,22 +59,18 @@
       </div>
       <div class="teaser">
         <!-- Replace src with your teaser image or video poster -->
-        <img src="static/teaser.jpg" alt="AFT‑Handover teaser showing task‑oriented robot–human handovers with diverse tools" />
+        <img src="static/teaser.jpg" alt="LLM‑Handover teaser showing task‑oriented robot–human handovers with diverse tools" />
       </div>
     </header>
 
     <section id="abstract" class="cols">
       <div class="panel">
         <h2>Abstract</h2>
-        <p>Task‑oriented handovers (TOH) are fundamental to effective human–robot collaboration, requiring robots to present objects in ways that support the human’s intended post‑handover use. Many existing approaches model affordances in an object‑ or task‑specific manner, limiting their ability to generalize to novel scenarios. To address this challenge, we introduce <b>AFT‑Handover</b>, a framework that combines large language model (LLM)‑driven affordance reasoning with texture‑based transfer to enable zero‑shot, task‑aware handovers. For a novel object–task pair, the framework retrieves a proxy exemplar from a compact database, establishes part‑level correspondences via LLM reasoning, and transfers annotated affordances using feature‑based texture mapping. We evaluate AFT‑Handover across diverse object–task pairs, showing improved grasp success rates and stronger generalization compared to state‑of‑the‑art baselines. In a user study with 14 participants, our method was preferred in <b>71.4%</b> of trials, reducing regrasping effort and enhancing perceived task understanding. Finally, we demonstrate the first real‑world task‑oriented handovers on legged manipulators, highlighting the potential of integrating semantic reasoning with affordance transfer for robust, mobile robot–human interaction.</p>
+        <p>Effective human-robot collaboration depends on task-oriented handovers, where robots present objects in ways that support the partner’s intended use. However, many existing approaches neglect the human’s post-handover action, relying on assumptions that limit generalizability. To address this gap, we propose LLM-Handover, a novel framework that integrates large language model (LLM)-based reasoning with part segmentation to enable context-aware grasp selection and execution. Given an RGB-D image and a task description, our system infers relevant object parts and selects grasps that optimize post-handover usability. To support evaluation, we introduce a new dataset of 60 household objects spanning 12 categories, each annotated with detailed part labels. We first demonstrate that our approach improves the performance of the used state-of-the-art part segmentation method, in the context of robot-human handovers. Next, we show that LLM-Handover achieves higher grasp success rates and adapts better to post-handover task constraints. During hardware experiments, we achieve a success rate of 83% in a zero-shot setting over conventional and unconventional post-handover tasks. Finally, our user study underlines that our method enables more intuitive, context-aware handovers, with participants preferring it in 86% of cases.</p>
       </div>
       <div class="panel">
         <h2>At a Glance</h2>
         <ul>
-          <li>LLM‑guided functional <em>part</em> reasoning + texture‑based affordance transfer</li>
-          <li>Zero‑shot generalization across conventional & unconventional tool–task pairs</li>
-          <li>Improved grasp success vs. SOTA; fewer regrasps in user study</li>
-          <li>First TOH on legged manipulators</li>
         </ul>
       </div>
     </section>
@@ -83,7 +79,7 @@
       <h2>Video</h2>
       <!-- Replace the src with your YouTube embed link -->
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;border:1px solid var(--line)">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="AFT‑Handover video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="LLM‑Handover video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe>
       </div>
     </section>
 
@@ -100,7 +96,7 @@
     <section id="paper" class="cols">
       <div class="panel">
         <h2>Method Overview</h2>
-        <p>AFT‑Handover integrates perception, LLM‑based reasoning, and feature‑space texture transfer to produce task‑aware grasp proposals. Given an RGB‑D observation and a natural‑language task description, the system segments the target object, retrieves a semantically similar proxy exemplar, aligns functional parts via LLM cues, transfers dense affordance maps to the query shape, and selects a grasp that both avoids human‑contact regions and supports the intended post‑handover use.</p>
+        <p>LLM‑Handover integrates perception, LLM‑based reasoning, </p>
       </div>
       <div class="panel">
         <h2>Resources</h2>
@@ -114,8 +110,8 @@
 
     <section id="bibtex" class="panel">
       <h2>Citation</h2>
-      <pre class="code">@inproceedings{aft-handover,
-  title     = {AFT-Handover: Task-oriented Robot-Human Handovers on Legged Manipulators},
+      <pre class="code">@inproceedings{llm-handover,
+  title     = {LLM: Exploiting LLMs for Task-oriented Robot-Human Handovers},
   author    = {Anonymous},
   booktitle = {soon},
   year      = {2025}
